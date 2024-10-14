@@ -2,10 +2,7 @@ package com.example.dependencyinjectionusingdagger
 
 import android.util.Log
 
-class ClassC {
-    lateinit var classA : ClassA
-    lateinit var classB : ClassB
-
+class ClassC (private val classA: ClassA, private val classB: ClassB){
     fun startClassC() {
         classA.startClassA()
         classB.startClassB()

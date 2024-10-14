@@ -17,9 +17,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val classC = ClassC()
-        classC.classA = ClassA()
-        classC.classB = ClassB()
+        val classA = ClassA()
+        val classB = ClassB()
+        val classC = ClassC(classA, classB)
         classC.startClassC()
     }
 }
