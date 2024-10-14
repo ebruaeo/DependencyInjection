@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         val classC = ClassC()
+        classC.classA = ClassA()
+        classC.classB = ClassB()
         classC.startClassC()
     }
 }
