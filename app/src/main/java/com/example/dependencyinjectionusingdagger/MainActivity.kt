@@ -17,9 +17,6 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val classA = ClassA()
-        val classB = ClassB()
-        val classC = ClassC(classA, classB)
-        classC.startClassC()
+        DaggerClassCComponent.create().getClassCInstance().startClassC()
     }
 }

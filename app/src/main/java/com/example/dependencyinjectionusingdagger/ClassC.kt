@@ -1,8 +1,9 @@
 package com.example.dependencyinjectionusingdagger
 
 import android.util.Log
+import javax.inject.Inject
 
-class ClassC (private val classA: ClassA, private val classB: ClassB){
+class ClassC @Inject constructor(val classA: ClassA, val classB: ClassB){
     fun startClassC() {
         classA.startClassA()
         classB.startClassB()
